@@ -13,7 +13,7 @@ async function loadDestinations() {
     const options = {
       method: "GET",
       headers: {
-        "x-rapidapi-key": "9770d12d14msh1b21e5f79c85f95p16e30fjsn9243a43f972f",
+        "x-rapidapi-key": "",
         "x-rapidapi-host": "countries-cities.p.rapidapi.com",
       },
     };
