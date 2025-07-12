@@ -17,7 +17,7 @@
   <body class="font-sans">
     <!-- Navbar -->
     <nav
-      class="blur-bg text-white border-b-4 border-blue-500 fixed w-full z-10"
+      class="blur-bg text-white border-b-4 border-blue-500 fixed w-full z-10 shadow-sm"
     >
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center py-4">
@@ -83,7 +83,11 @@
     <!-- Hero Section -->
     <section
       class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
-      style="background-image: url('images/hero-bg.jpg')"
+      style="
+        background-image: url('images/hero-bg.jpg');
+        background-size: cover;
+        background-position: 0 0;
+      "
     >
       <div class="bg-black bg-opacity-20 p-6 rounded">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">
@@ -101,33 +105,60 @@
     </section>
 
     <!-- Video Section -->
-    <section class="py-12 px-4 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold mb-4 text-center">Watch Our Promo Video</h2>
-      <video class="w-full rounded shadow" controls>
-        <source
-          src="https://www.w3schools.com/html/mov_bbb.mp4"
-          type="video/mp4"
-        />
-        <track
-          src="subtitles.vtt"
-          kind="subtitles"
-          srclang="en"
-          label="English"
-        />
-        Your browser does not support the video tag.
-      </video>
+    <!-- Video Section -->
+    <section class="py-12 px-4 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">Watch Our Promo Video</h2>
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <!-- Video -->
+        <div class="w-full md:w-1/2">
+          <video class="w-full rounded shadow" controls>
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            <track
+              src="subtitles.vtt"
+              kind="subtitles"
+              srclang="en"
+              label="English"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- Description -->
+        <div class="w-full md:w-1/2 text-gray-700 text-lg">
+          <p>
+            Discover breathtaking destinations through our exclusive promotional
+            video — inspiring you to plan your next unforgettable journey!
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Audio Section -->
-    <section class="py-12 px-4 max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">Relaxing Background Music</h2>
-      <audio controls>
-        <source
-          src="https://audio-variant-previews.envatousercontent.com/M4A/c7/f5/84/1c/4e/v1_E11/E111JTOV.m4a"
-          type="audio/mpeg"
-        />
-        Your browser does not support the audio element.
-      </audio>
+    <section class="py-12 px-4 max-w-7xl mx-auto">
+      <h2 class="text-3xl font-bold mb-8 text-center">
+        Relaxing Background Music
+      </h2>
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <!-- Audio Player -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <audio controls class="w-full max-w-md">
+            <source
+              src="https://audio-variant-previews.envatousercontent.com/M4A/c7/f5/84/1c/4e/v1_E11/E111JTOV.m4a"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <!-- Description -->
+        <div class="w-full md:w-1/2 text-gray-700 text-lg">
+          <p>
+            Let the calm melodies ease your mind and enhance your travel
+            planning with this relaxing background track.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- API Fetch Section -->
@@ -140,20 +171,28 @@
 
     <!-- Footer -->
     <footer
-      class="bg-gray-800 text-white py-8 text-center flex flex-col items-center"
+      class="bg-gray-900 text-white py-10 text-center flex flex-col items-center border-t-4 border-blue-500"
     >
-      <p>Follow us for more adventures!</p>
-      <div class="flex justify-center space-x-4 mt-4">
-        <i class="fab fa-facebook fa-lg"></i>
-        <i class="fab fa-twitter fa-lg"></i>
-        <i class="fab fa-instagram fa-lg"></i>
+      <p class="uppercase tracking-widest text-sm mb-4">
+        Follow us for more adventures!
+      </p>
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="#" class="hover:text-yellow-400 transition"
+          ><i class="fab fa-facebook fa-lg"></i
+        ></a>
+        <a href="#" class="hover:text-yellow-400 transition"
+          ><i class="fab fa-twitter fa-lg"></i
+        ></a>
+        <a href="#" class="hover:text-yellow-400 transition"
+          ><i class="fab fa-instagram fa-lg"></i
+        ></a>
       </div>
-      <div class="mt-6 w-24 mx-auto">
+      <div class="bg-blue-500 p-3 rounded-full mb-6">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 384 512"
-          height="24px"
-          width="24px"
+          height="32px"
+          width="32px"
         >
           <path
             fill="#ffffff"
@@ -161,7 +200,9 @@
           />
         </svg>
       </div>
-      <p class="mt-4">&copy; 2025 Travel Explorer</p>
+      <p class="text-sm uppercase tracking-widest">
+        &copy; 2025 Travel Explorer
+      </p>
     </footer>
 
     <script src="app.js"></script>
