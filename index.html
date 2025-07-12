@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <title>Travel Explorer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
+
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -15,7 +13,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="font-sans">
-    <!-- Navbar -->
     <nav
       class="blur-bg text-white border-b-4 border-blue-500 fixed w-full z-10 shadow-sm"
     >
@@ -144,10 +141,7 @@
         <!-- Audio Player -->
         <div class="w-full md:w-1/2 flex justify-center">
           <audio controls class="w-full max-w-md">
-            <source
-              src="https://audio-variant-previews.envatousercontent.com/M4A/c7/f5/84/1c/4e/v1_E11/E111JTOV.m4a"
-              type="audio/mpeg"
-            />
+            <source src="audio/bg-audio.m4a" type="audio/mpeg" />
             Your browser does not support the audio element.
           </audio>
         </div>
@@ -163,7 +157,9 @@
 
     <!-- API Fetch Section -->
     <section class="py-12 px-4 max-w-5xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-6">Featured Destinations</h2>
+      <h2 class="text-3xl font-bold mb-6">Featured Pokemon</h2>
+      <p class="text-sm bold">as your Travel Partner</p>
+      <div style="height: 16px"></div>
       <div id="api-content" class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- API content will be inserted here -->
       </div>
