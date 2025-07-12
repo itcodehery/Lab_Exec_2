@@ -1,0 +1,9 @@
+.blur-bg {
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1556621.jpg&f=1&nofb=1&ipt=d38ef2cee8c4bc3a7325f6e0c3e4b78bcb3efbae732150320be64ae29890be54");
+}

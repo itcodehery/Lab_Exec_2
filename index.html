@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Travel Explorer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="font-sans">
+    <!-- Navbar -->
+    <nav
+      class="blur-bg text-white border-b-4 border-blue-500 fixed w-full z-10"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <div
+            class="bg-blue-500 px-3 py-1 rounded text-lg font-extrabold tracking-wider"
+          >
+            Tripmate
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#"
+              class="flex items-center uppercase tracking-wide hover:text-yellow-400 transition"
+              ><i class="fas fa-home mr-2"></i>Home</a
+            >
+            <a
+              href="#"
+              class="flex items-center uppercase tracking-wide hover:text-yellow-400 transition"
+              ><i class="fas fa-map-marker-alt mr-2"></i>Places</a
+            >
+            <a
+              href="#"
+              class="flex items-center uppercase tracking-wide hover:text-yellow-400 transition"
+              ><i class="fas fa-image mr-2"></i>Gallery</a
+            >
+            <a
+              href="#"
+              class="flex items-center uppercase tracking-wide hover:text-yellow-400 transition"
+              ><i class="fas fa-envelope mr-2"></i>Contact</a
+            >
+          </div>
+          <!-- Hamburger -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="focus:outline-none">
+              <i class="fas fa-bars fa-2x text-white"></i>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden flex-col space-y-2 pb-4 md:hidden">
+          <a
+            href="#"
+            class="block uppercase tracking-wide hover:text-yellow-400 transition"
+            ><i class="fas fa-home mr-2"></i>Home</a
+          >
+          <a
+            href="#"
+            class="block uppercase tracking-wide hover:text-yellow-400 transition"
+            ><i class="fas fa-map-marker-alt mr-2"></i>Places</a
+          >
+          <a
+            href="#"
+            class="block uppercase tracking-wide hover:text-yellow-400 transition"
+            ><i class="fas fa-image mr-2"></i>Gallery</a
+          >
+          <a
+            href="#"
+            class="block uppercase tracking-wide hover:text-yellow-400 transition"
+            ><i class="fas fa-envelope mr-2"></i>Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
+      style="background-image: url('images/hero-bg.jpg')"
+    >
+      <div class="bg-black bg-opacity-20 p-6 rounded">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          Discover Amazing Destinations
+        </h1>
+        <p class="mb-6 text-lg md:text-xl">
+          Get inspired and plan your next adventure with us.
+        </p>
+        <a
+          href="#"
+          class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-semibold"
+          >Explore Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-12 px-4 max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Watch Our Promo Video</h2>
+      <video class="w-full rounded shadow" controls>
+        <source
+          src="https://www.w3schools.com/html/mov_bbb.mp4"
+          type="video/mp4"
+        />
+        <track
+          src="subtitles.vtt"
+          kind="subtitles"
+          srclang="en"
+          label="English"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="py-12 px-4 max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Relaxing Background Music</h2>
+      <audio controls>
+        <source
+          src="https://audio-variant-previews.envatousercontent.com/M4A/c7/f5/84/1c/4e/v1_E11/E111JTOV.m4a"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+
+    <!-- API Fetch Section -->
+    <section class="py-12 px-4 max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Featured Destinations</h2>
+      <div id="api-content" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- API content will be inserted here -->
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-800 text-white py-8 text-center flex flex-col items-center"
+    >
+      <p>Follow us for more adventures!</p>
+      <div class="flex justify-center space-x-4 mt-4">
+        <i class="fab fa-facebook fa-lg"></i>
+        <i class="fab fa-twitter fa-lg"></i>
+        <i class="fab fa-instagram fa-lg"></i>
+      </div>
+      <div class="mt-6 w-24 mx-auto">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 384 512"
+          height="24px"
+          width="24px"
+        >
+          <path
+            fill="#ffffff"
+            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"
+          />
+        </svg>
+      </div>
+      <p class="mt-4">&copy; 2025 Travel Explorer</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
